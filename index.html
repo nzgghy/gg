@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>内职 广告</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            background-image: url('/image/8.png'); 
+            background-size: cover; 
+            background-attachment: fixed; 
+            background-color: rgba(255, 255, 255, 1);
+        }
+
+        .container {
+            padding: 10px; /* Reduce padding for smaller screens */
+            position: relative; /* Ensure proper positioning */
+        }
+
+        h1, h2, h3, h4 {
+            text-align: center; /* Center headings */
+        }
+
+        p {
+            text-align: center; /* Center paragraphs */
+        }
+
+        .ad img {
+            max-width: 100%; /* Adjust image width for smaller screens */
+            height: auto; /* Maintain aspect ratio */
+            margin: 10px 0; /* Add spacing between images */
+        }
+
+        .sidebar {
+            width: 100%; /* Adjust width for smaller screens */
+            background-color: #f4f4f4; 
+            padding: 10px; /* Reduce padding for smaller screens */
+        }
+
+        .sidebar h2 {
+            margin-bottom: 5px; /* Adjust spacing for smaller screens */
+        }
+
+        .sidebar a {
+            display: block; 
+            margin-bottom: 5px; /* Adjust spacing for smaller screens */
+        }
+
+        .video-container {
+            display: flex; 
+            flex-direction: column; /* Stack video and text vertically on smaller screens */
+            align-items: center; /* Center items horizontally */
+        }
+
+        video {
+            width: 100%; /* Ensure video fills container */
+        }
+
+        .upper-section,
+        .middle-section,
+        .lower-section {
+            padding: 10px; /* Reduce padding for smaller screens */
+            background-color: rgba(255, 255, 255, 0.9); /* Adjust background opacity */
+        }
+
+        .left-section,
+        .right-section,
+        .center-section {
+            width: 100%; /* Adjust width for smaller screens */
+        }
+    </style>
+</head>
+<body>
+    <div class="upper-section">
+        <div class="container">
+            <div class="video-container">
+                <video autoplay loop controls>
+                    <source src="/image/1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="article">
+                    <p>这里只有你想不到，没有找不到的</p>
+                    <h4>如有需要投广告的可加以下方式</h4>
+                    <p>@作者联系方式vx:<p style="color: red;">wang2523008894</p></p>
+                    <p>免费电影，电视剧，要各种VIP的这里都免费（点击即可观看）</p>
+                    <p><a href="https://w5vue.com/">免费电影</a></p>
+                </div>
+                <div class="sidebar">
+                   <h2>热门链接(点击会自动跳转)</h2> 
+                   <p>以下全是代码生成</p>
+                    <a href="https://mydewang.github.io/liangzi/" target="_blank">1.量子效果（用2个网页建议用电脑）</a>
+                    <a href=" https://mydewang.github.io/longjuanfeng/" target="_blank">2.龙卷风</a>
+                    <a href="https://mydewang.github.io/aixin/" target="_blank">3.表白（爱心）</a>
+                    <a href="https://haiyong.site/tools/yanhua/">4.烟花</a>
+                    <p>更多代码，尽请关注我们的网站</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="middle-section">
+        <div class="container">
+            <div class="left-section">
+                <h3>新生须知:</h3>
+                <p>1.军训2周</p>
+                <P>2.内职表白墙<P style="color: red;"> qq:1324864399</P>   
+                </P>
+                <p>3.外卖：内职外卖，微加外卖，私人商家外卖等等，（微信搜名称或者扫码）</p>
+                <P style="color: #0078d7;"><img src="/xxqg/5.jpg" width="40%" height="40%">（比较推荐一家）</P>
+                <p>更多精彩内容，尽请关注我们的网站。</p>
+            </div>
+            <div class="center-section">
+                <h1>欢迎来到内职广告网站</h1>
+                <p>这里是一些关于我们的广告信息。请浏览以下内容：</p>
+                <div class="ad">
+                    <p>学习强国；网课（需要的可以联系@作者）</p>
+                    <p>代看网课（包做题，正确率95%），只需要5块全网最低 代刷学习强国每天保证40分以上（每个月10r）全网最低</p>
+                    <p><img src="/xxqg/1.jpg"><img src="/xxqg/2.jpg"><img src="/xxqg/3.jpg"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="lower-section">
+        <div class="container">
+            <div class="ad">
+                <p>买被子就找@习习学姐！<a href="#" onclick="showContactInfo()">点击显示联系方式(双击)</a></p>
+                
+                <div id="contactInfo">
+                    <div class="zhong">
+                        <img src="/image/12.jpg" alt="Your Image">
+                    </div>
+                    <p style="color: red;">vx:zhouyu5771</p>
+                </div>
+                
+                <p><img src="/image/1.jpg" alt="广告图片1" onclick="zoomImage(this)"> <img src="/image/2.jpg" alt="广告图片2" onclick="zoomImage(this)"><img src="/image/6.jpg" alt="广告图片3" onclick="zoomImage(this)"></p>
+            </div>
+            <p>更多精彩内容，尽请关注我们的网站。</p>
+        </div>
+    </div>
+
+    <script>
+        function showContactInfo() {
+            var contactInfo = document.getElementById("contactInfo");
+            if (contactInfo.style.display === "none") {
+                contactInfo.style.display = "block";
+            } else {
+                contactInfo.style.display = "none";
+            }
+        }
+
+        function zoomImage(image) {
+            if (image.classList.contains("clicked")) {
+                image.classList.remove("clicked");
+            } else {
+                image.classList.add("clicked");
+            }
+        }
+    </script>
+</body>
+</html>
