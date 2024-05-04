@@ -1,111 +1,101 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>内职 广告</title>
+    <title>Document</title>
     <style>
-        body {
-            background-image: url('images/4.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
+        .overlay {
+          display: none;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.5);
+          z-index: 999;
         }
-
-        .container {
-            width: 100%;
-            padding: 2%;
-            position: relative;
+        .popup {
+          position: fixed;
+          background-color: white;
+          width: 300px;
+          padding: 20px;
+          border-radius: 5px;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
         }
+        #openBtn {
+    background-color: orange; /* 设置按钮背景颜色为红色 */
+    color: red; /* 设置按钮文字颜色为白色 */
+    border: none; /* 移除按钮边框 */
+    padding: 10px 20px; /* 设置按钮内边距 */
+    border-radius: 5px; /* 设置按钮圆角 */
+    cursor: pointer; /* 鼠标悬停时显示手型光标 */
+  }
+  .popup {
+    background-color: #f5deb3; /* 设置弹窗背景颜色为白棕色 */
+  }
+  #closeBtn {
+    background-color: #007bff; /* 设置关闭按钮背景颜色为蓝色 */
+    color: orange; /* 设置关闭按钮文字颜色为白色 */
+    border: none; /* 移除关闭按钮边框 */
+    padding: 10px 20px; /* 设置关闭按钮内边距 */
+    border-radius: 20px; /* 设置关闭按钮圆角 */
+    cursor: pointer; /* 鼠标悬停时显示手型光标 */
+  }
+  body {
+    /* 设置背景颜色为蓝色，透明度为0.5 */
+    background-color: rgba(255, 255, 255, 0.2);
+    /* 设置背景图片 */
+    background-image: url('images/4.jpg');
+    /* 背景图片重复方式 */
+    background-repeat: no-repeat;
+    /* 背景图片位置 */
+    background-position: center center;
+    /* 背景图片大小 */
+    background-size: cover;
+  }
+  @media only screen and (max-width: 600px) {
+    body {
+      /* 如果是手机屏幕，可以设置背景图片大小为100%宽度，保证在手机屏幕上显示良好 */
+      background-size: 100% auto;
+    }
+  }
+  .content-wrapper {
+    padding: 20px;
+    /* 为内容区域添加滚动样式 */
+    overflow-y: scroll; /* 总是显示滚动条，即使内容不溢出 */
+    /* 隐藏浏览器的原生滚动条 */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; 
+    height: 100vh; /* 确保内容区域占据整个视口的高度 */
+  }
 
-        h1 {
-            color: #333;
-            text-align: center;
-            font-size: 200%;
-        }
 
-        p {
-            color: #666;
-            text-align: center;
-            font-size: 120%;
-        }
-
-        .ad {
-            margin-top: 4%;
-            text-align: center;
-        }
-
-        .ad img {
-            max-width: 20%;
-            height: auto;
-            margin-top: 4%;
-            transition: transform 0.3s;
-            cursor: pointer;
-        }
-
-        .ad img:hover {
-            transform: scale(1.2);
-        }
-
-        .ad img.clicked {
-            transform: scale(2);
-        }
-
-        .middle-section {
-            background-color: rgba(255, 255, 255, 0.5);
-            padding: 4%;
-        }
-
-        /* 左中右布局 */
-        .left-section {
-            width: 20%;
-            float: left;
-        }
-
-        .right-section {
-            width: 27%;
-            float: right;
-            position: absolute;
-            top: 0;
-            right: 0;
-        }
-
-        .center-section {
-            width: 60%;
-            margin: 0 auto;
-        }
-
-        h3 {
-            color: red;
-            font-size: 150%;
-        }
-
-        h2 {
-            color: #0078d7;
-            font-size: 130%;
-        }
-
-        #red-link {
-            color: red;
-        }
-
-        /* ...其他样式未变... */
-    </style>
+.content::-webkit-scrollbar {
+  display: none; /* Chrome/Safari/Opera */
+}
+  .content {
+    /* 为内容区域设置最小高度，防止内容过少时无法滚动 */
+    min-height: 100%;
+    
+  }
+      </style>
 </head>
-
 <body>
-    <!-- 上部分 -->
+
+    <div class="content-wrapper">
+        <div class="content">
     <p style="color: #0078d7;">这里只有你想不到，没有找不到的</p>
     <h4>如有需要投广告的可加以下方式</h4>
-    <p>@作者联系方式vx:<p style="color: red;">wang2523008894</p>
-    </p>
+    <p>@作者联系方式vx:<p style="color: red;">wang2523008894</p></p>
     <p>免费电影，电视剧，要各种VIP的这里都免费（点击即可观看）</p>
-    <p align="center"><a href="https://w5vue.com/" id="h-link" target="_blank">免费电影</a></p>
-    <br>
+    <p align="center"><a href="https://w5vue.com/" id="h-link">免费电影</a></p>
+
+
+    
     <h2>祝福语:(新生)</h2>
     <p style="color: #00ff00;">恭喜你踏入新的人生阶段，愿你在接下来的日子里充满喜悦和成功。</p>
     <P style="color: yellow;">新生如旭日东升，愿你勇往直前，开创属于自己的辉煌。</P>
@@ -117,99 +107,72 @@
     <P style="color: pink;">新生如同白纸一张，愿你用智慧和勇气书写属于自己的精彩篇章。</P>
     <P style="color: mediumvioletred;">在这个新的开始，愿你的心中充满阳光和希望，勇敢地追求自己的梦想。</P>
     <P style="color: lightsteelblue;">新生是新的开始，也是新的希望，愿你在未来的日子里一切顺利，实现自己的人生价值。</p>
+        
+        
+        <video autoplay loop controls>
+            <source src="/image/1.mp4" type="video/mp4">
+        </video>
 
-    <!-- 将文本放在视频左侧 -->
-    <video autoplay loop controls>
-        <source src="images/1.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
 
-    <h3>新生须知:</h3>
-    <p style="color: yellowgreen;">1.军训2周</p>
-    <P>2.内职表白墙
-        <P style="color: red;"> qq:1324864399</P>
-    </P>
-    <p>3.外卖：内职外卖，微加外卖，私人商家外卖等等，（微信搜名称或者扫码）</p>
-    <P style="color: #0078d7;"><img src="xxqg/5.jpg" width="40%" height="40%">（比较推荐一家）</P>
-    <p style="color: #00ff00;">更多精彩内容，尽请关注我们的网站。</p>
-    <h2>热门链接(点击会自动跳转)</h2>
-    <p>以下全是代码生成</p>
-    <a href="https://mydewang.github.io/liangzi/" target="_blank" id="red-link">1.量子效果（用2个网页建议用电脑）</a>
-    <br><a href=" https://mydewang.github.io/longjuanfeng/" target="_blank" id="blue-link">2.龙卷风</a>
-    <br><a href="https://mydewang.github.io/aixin/" target="_blank" id="g-likn">3.表白（爱心）</a>
-    <br><a href="https://haiyong.site/tools/yanhua/" target="_blank">4.烟花</a>
-    <p>更多代码，尽请关注我们的网站</p>
-    <!-- 中间 -->
-    <!-- 中部分 -->
-    <div class="middle-section">
-        <div class="container">
-            <!-- 左边 -->
-            <div class="left-section">
+       <h2>热门链接(点击会自动跳转)</h2> 
+        <p>以下全是代码生成</p>
+        <a href="https://mydewang.github.io/liangzi/" target="_blank" id="red-link">1.量子效果（用2个网页建议用电脑）</a>
+        <a href=" https://mydewang.github.io/longjuanfeng/" target="_blank" id="blue-link">2.龙卷风</a>
+        <a href="https://mydewang.github.io/aixin/" target="_blank" id="g-likn">3.表白（爱心）</a>
+        <a href="https://haiyong.site/tools/yanhua/">4.烟花</a>
+        <p>更多代码，尽请关注我们的网站</p>
 
-            </div>
 
-            <h3>欢迎来到内职广告网站</h3>
+        <h3>新生须知:</h3>
+            <p style="color: yellowgreen;">1.军训2周</p>
+            <P>2.内职表白墙<P style="color: red;"> qq:1324864399</P>   
+            </P>
+            <p>3.外卖：内职外卖，微加外卖，私人商家外卖等等，（微信搜名称或者扫码）</p>
+            <P style="color: #0078d7;"><img src="/xxqg/5.jpg" width="40%" height="40%">（比较推荐一家）</P>
+            <p style="color: #00ff00;">更多精彩内容，尽请关注我们的网站。</p>
+
+            
+            <h1>欢迎来到内职广告网站</h1>
             <p style="color: #00ff00;">这里是一些关于我们的广告信息。请浏览以下内容：</p>
-            <div class="ad">
-                <p>学习强国；网课（需要的可以联系@作者）</p>
-                <p style="color: orange;">代看网课（包做题，正确率95%），只需要5块全网最低 代刷学习强国<br>每天保证40分以上
-                    （每个月10r）全网最低</p>
-                <p><img src="images/1.jpg"><img src="images/2.jpg"><img src="images/3.jpg"></p>
-            </div>
-            </div>
-            <!-- 右边 -->
-            <div class="right-section">
+            <p>学习强国；网课（需要的可以联系@作者）</p>
+            <p style="color: orange;">代看网课（包做题，正确率95%），只需要5块全网最低 代刷学习强国每天保证40分以上（每个月10r）全网最低</p>
+            <p><img src="/xxqg/1.jpg"><img src="/xxqg/2.jpg"><img src="/xxqg/3.jpg"></p>
 
-            </div>
-        </div>
-    </div>
 
-    <!-- 下部分 -->
-    <!-- 下面是原始的第3个区域的代码 -->
-    <div class="lower-section">
-        <div class="container">
-            <div class="ad">
-                <p>买被子就找@习习学姐！
-                    <!-- 点击链接时触发显示联系方式 -->
-                    <a href="#" onclick="showContactInfo()">点击显示联系方式(双击)</a>
-
-                    <!-- 联系方式部分 -->
-                    <div id="myModal" class="modal">
-                        <div class="modal-content">
-                            <span class="close" onclick="closeModal()">&times;</span>
-                            <p align="center" style="color: red;">vx:zhouyu5771</p>
-                        </div>
+       
+                
+                    
+                </p><p>买被子就找@习习学姐！</p>
+                <button id="openBtn">点击显示联系方式</button>
+                <div id="overlay" class="overlay">
+                    <div class="popup">
+                      <h2>这是一个弹窗</h2>
+                      <p><img src="/image/12.jpg" alt="Your Image">
+               
+                        <p align="center"style="color: red;">vx:zhouyu5771</p></p>
+                      <button id="closeBtn">关闭</button>
                     </div>
-
-                    <script>
-                        // 显示联系方式的函数
-                        function showContactInfo() {
-                            var modal = document.getElementById("myModal");
-                            modal.style.display = "block";
-                        }
-
-                        // 关闭弹窗的函数
-                        function closeModal() {
-                            var modal = document.getElementById("myModal");
-                            modal.style.display = "none";
-                        }
-                    </script>
-                </p>
-                <p><img src="images/6.jpg" alt="广告图片1" onclick="zoomImage(this)"> <img src="images/9.jpg" alt="广告图片2" onclick="zoomImage(this)"><img src="images/10.jpg" alt="广告图片3" onclick="zoomImage(this)"></p>
-            </div>
+                  </div>
+                
+                <p><img src="/image/1.jpg" alt="广告图片1" onclick="zoomImage(this)"> <img src="/image/2.jpg" alt="广告图片2" onclick="zoomImage(this)"><img src="/image/6.jpg" alt="广告图片3" onclick="zoomImage(this)"></p>
+            
             <p style="color: orange;">更多精彩内容，尽请关注我们的网站。</p>
-        </div>
-    </div>
+        
+<script>
+    var openBtn = document.getElementById('openBtn');
+    var overlay = document.getElementById('overlay');
+    var closeBtn = document.getElementById('closeBtn');
+  
+    openBtn.addEventListener('click', function() {
+      overlay.style.display = 'block';
+    });
+  
+    closeBtn.addEventListener('click', function() {
+      overlay.style.display = 'none';
+    });
 
-    <script>
-        function zoomImage(image) {
-            if (image.classList.contains("clicked")) {
-                image.classList.remove("clicked");
-            } else {
-                image.classList.add("clicked");
-            }
-        }
-    </script>
-</body>
-
+  </script>
+  </div></div>
+    </body>
 </html>
+   
