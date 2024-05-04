@@ -10,8 +10,8 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-image: url('images/4.jpg'); 
-            background-color: rgba(255, 255, 255, 1);
+            background-image: url('images/4.jpg');
+            background-color: rgba(255, 255, 255, 0.5);
         }
 
         .container {
@@ -122,6 +122,47 @@
                 max-width: 30%;
             }
         }
+
+        /* 弹窗样式 */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* 调整视频大小 */
+        video {
+            width: 50%; /* 设置视频宽度为原来的一半 */
+            height: auto; /* 让浏览器根据宽度自动计算高度，保持原始宽高比 */
+        }
     </style>
 </head>
 
@@ -146,15 +187,12 @@
     <P style="color: mediumvioletred;">在这个新的开始，愿你的心中充满阳光和希望，勇敢地追求自己的梦想。</P>
     <P style="color: lightsteelblue;">新生是新的开始，也是新的希望，愿你在未来的日子里一切顺利，实现自己的人生价值。</p>
 
-
-    </div>
     <!-- 将文本放在视频左侧 -->
     <video autoplay loop controls>
         <source src="images/1.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
 
-    </div>
     <h3>新生须知:</h3>
     <p style="color: yellowgreen;">1.军训2周</p>
     <P>2.内职表白墙
@@ -205,25 +243,24 @@
                     <a href="#" onclick="showContactInfo()">点击显示联系方式(双击)</a>
 
                     <!-- 联系方式部分 -->
-                    <div id="contactInfo">
-                        <!-- 图片居中显示 -->
-                        <div class="zhong">
-                            <img src="images/12.jpg" alt="Your Image">
+                    <div id="myModal" class="modal">
+                        <div class="modal-content">
+                            <span class="close" onclick="closeModal()">&times;</span>
+                            <p align="center" style="color: red;">vx:zhouyu5771</p>
                         </div>
-                        <p align="center" style="color: red;">vx:zhouyu5771</p>
                     </div>
 
                     <script>
                         // 显示联系方式的函数
                         function showContactInfo() {
-                            // 获取联系方式的元素
-                            var contactInfo = document.getElementById("contactInfo");
-                            // 切换显示状态
-                            if (contactInfo.style.display === "none") {
-                                contactInfo.style.display = "block";
-                            } else {
-                                contactInfo.style.display = "none";
-                            }
+                            var modal = document.getElementById("myModal");
+                            modal.style.display = "block";
+                        }
+
+                        // 关闭弹窗的函数
+                        function closeModal() {
+                            var modal = document.getElementById("myModal");
+                            modal.style.display = "none";
                         }
                     </script>
                 </p>
@@ -235,7 +272,6 @@
 
     <script>
         function zoomImage(image) {
-            // 切换图片的类名
             if (image.classList.contains("clicked")) {
                 image.classList.remove("clicked");
             } else {
