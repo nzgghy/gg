@@ -15,6 +15,8 @@
           background-color: rgba(0, 0, 0, 0.5);
           z-index: 999;
         }
+        
+  
         .popup {
           position: fixed;
           background-color: white;
@@ -33,6 +35,7 @@
     padding: 10px 20px; /* 设置按钮内边距 */
     border-radius: 5px; /* 设置按钮圆角 */
     cursor: pointer; /* 鼠标悬停时显示手型光标 */
+   
   }
   .popup {
     background-color: #f5deb3; /* 设置弹窗背景颜色为白棕色 */
@@ -47,9 +50,9 @@
   }
   body {
     /* 设置背景颜色为蓝色，透明度为0.5 */
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.5); /* 白色，透明度为 0.5 */
     /* 设置背景图片 */
-    background-image: url('images/4.jpg');
+    background-image: url('images/4.png');
     /* 背景图片重复方式 */
     background-repeat: no-repeat;
     /* 背景图片位置 */
@@ -82,21 +85,45 @@
     min-height: 100%;
     
   }
+  h4,h2 {
+    text-align: center;
+  }
+  #red-link {
+          color: red;
+        }
+
+        /* 第二个链接为蓝色 */
+        #blue-link {
+          color:orange;
+        }
+        #g-likn {
+            color: #00ff00;
+        }
+        #h-link {
+            color: orange;
+        }
+        h1{color: red;}
+        .img{text-align: center;}
+        .button-container {
+    display: flex;
+    justify-content: center; /* 水平居中 */
+  }
+
       </style>
 </head>
 <body>
 
     <div class="content-wrapper">
         <div class="content">
-    <p style="color: #0078d7;">这里只有你想不到，没有找不到的</p>
+    <p align="center" style="color: #0078d7;">这里只有你想不到，没有找不到的</p>
     <h4>如有需要投广告的可加以下方式</h4>
-    <p>@作者联系方式vx:<p style="color: red;">wang2523008894</p></p>
+    <p>@作者联系方式vx:<p  align="center" style="color: red;">wang2523008894</p></p>
     <p>免费电影，电视剧，要各种VIP的这里都免费（点击即可观看）</p>
     <p align="center"><a href="https://w5vue.com/" id="h-link">免费电影</a></p>
 
 
     
-    <h2>祝福语:(新生)</h2>
+    <h3>祝福语:(新生)</h2>
     <p style="color: #00ff00;">恭喜你踏入新的人生阶段，愿你在接下来的日子里充满喜悦和成功。</p>
     <P style="color: yellow;">新生如旭日东升，愿你勇往直前，开创属于自己的辉煌。</P>
     <P style="color: violet;">在这新的开始，愿你的每一天都充满阳光和欢笑，未来充满无限可能。</P>
@@ -110,53 +137,54 @@
         
         
         <video autoplay loop controls>
-            <source src="/image/1.mp4" type="video/mp4">
+            <source src="images/1.mp4" type="video/mp4">
         </video>
 
 
        <h2>热门链接(点击会自动跳转)</h2> 
         <p>以下全是代码生成</p>
         <a href="https://mydewang.github.io/liangzi/" target="_blank" id="red-link">1.量子效果（用2个网页建议用电脑）</a>
-        <a href=" https://mydewang.github.io/longjuanfeng/" target="_blank" id="blue-link">2.龙卷风</a>
-        <a href="https://mydewang.github.io/aixin/" target="_blank" id="g-likn">3.表白（爱心）</a>
-        <a href="https://haiyong.site/tools/yanhua/">4.烟花</a>
-        <p>更多代码，尽请关注我们的网站</p>
+        <br><a href=" https://mydewang.github.io/longjuanfeng/" target="_blank" id="blue-link">2.龙卷风</a>
+        <br><a href="https://mydewang.github.io/aixin/" target="_blank" id="g-likn">3.表白（爱心）</a>
+        <br><a href="https://haiyong.site/tools/yanhua/">4.烟花</a>
+        <p align="center">更多代码，尽请关注我们的网站</p>
 
 
         <h3>新生须知:</h3>
             <p style="color: yellowgreen;">1.军训2周</p>
-            <P>2.内职表白墙<P style="color: red;"> qq:1324864399</P>   
+            <P>2.内职表白墙<P  align="center" style="color: red;"> qq:1324864399</P>   
             </P>
             <p>3.外卖：内职外卖，微加外卖，私人商家外卖等等，（微信搜名称或者扫码）</p>
-            <P style="color: #0078d7;"><img src="/xxqg/5.jpg" width="40%" height="40%">（比较推荐一家）</P>
-            <p style="color: #00ff00;">更多精彩内容，尽请关注我们的网站。</p>
+            <P style="color: #0078d7;"><img src="images/5.jpg" width="40%" height="40%">（比较推荐一家）</P>
+            <p align="center" style="color: #00ff00;">更多精彩内容，尽请关注我们的网站。</p>
 
             
             <h1>欢迎来到内职广告网站</h1>
             <p style="color: #00ff00;">这里是一些关于我们的广告信息。请浏览以下内容：</p>
             <p>学习强国；网课（需要的可以联系@作者）</p>
             <p style="color: orange;">代看网课（包做题，正确率95%），只需要5块全网最低 代刷学习强国每天保证40分以上（每个月10r）全网最低</p>
-            <p><img src="/xxqg/1.jpg"><img src="/xxqg/2.jpg"><img src="/xxqg/3.jpg"></p>
+            <p><img src="images/1.jpg"><img src="images/2.jpg"><img src="images/3.jpg"></p>
 
 
        
                 
                     
                 </p><p>买被子就找@习习学姐！</p>
+                <div class="button-container">
                 <button id="openBtn">点击显示联系方式</button>
-                <div id="overlay" class="overlay">
+              </div><div id="overlay" class="overlay">
                     <div class="popup">
-                      <h2>这是一个弹窗</h2>
-                      <p><img src="/image/12.jpg" alt="Your Image">
+                      <h2>vx:</h2>
+                      <p><img src="/image/12.jpg" alt="" class="img">
                
                         <p align="center"style="color: red;">vx:zhouyu5771</p></p>
                       <button id="closeBtn">关闭</button>
                     </div>
                   </div>
                 
-                <p><img src="/image/1.jpg" alt="广告图片1" onclick="zoomImage(this)"> <img src="/image/2.jpg" alt="广告图片2" onclick="zoomImage(this)"><img src="/image/6.jpg" alt="广告图片3" onclick="zoomImage(this)"></p>
+                <p><img src="images/6.jpg" alt="广告图片1" onclick="zoomImage(this)"> <img src="images/9.jpg" alt="广告图片2" onclick="zoomImage(this)"><img src="images/10.jpg" alt="广告图片3" onclick="zoomImage(this)"></p>
             
-            <p style="color: orange;">更多精彩内容，尽请关注我们的网站。</p>
+            <p align="center" style="color: orange;">更多精彩内容，尽请关注我们的网站。</p>
         
 <script>
     var openBtn = document.getElementById('openBtn');
