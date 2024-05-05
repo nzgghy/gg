@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .overlay {
+         .overlay {
           display: none;
           position: fixed;
           top: 0;
@@ -50,7 +50,7 @@
   }
   body {
     /* 设置背景颜色为蓝色，透明度为0.5 */
-    background-color: rgba(255, 255, 255, 0.5); /* 白色，透明度为 0.5 */
+     /* 白色，透明度为 0.5 */
     /* 设置背景图片 */
     background-image: url('images/4.png');
     /* 背景图片重复方式 */
@@ -59,7 +59,21 @@
     background-position: center center;
     /* 背景图片大小 */
     background-size: cover;
+     
   }
+  body::before {
+    /* 使用 ::before 伪元素覆盖在背景图片上 */
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* 设置背景颜色，并调整透明度 */
+    background-color: rgba(255, 255, 255, 0.3); /* 50% 透明度的白色背景 */
+    /* 让伪元素在 z 轴上位于背景图片之上 */
+    z-index: -1;
+}
   @media only screen and (max-width: 600px) {
     body {
       /* 如果是手机屏幕，可以设置背景图片大小为100%宽度，保证在手机屏幕上显示良好 */
@@ -102,92 +116,88 @@
         #h-link {
             color: orange;
         }
-        h1{color: red;}
+        h1{color: red;
+          text-align: center;
+          }
         .img{text-align: center;}
         .button-container {
     display: flex;
     justify-content: center; /* 水平居中 */
   }
-
-      </style>
+  .video-container {
+      display: flex;
+      justify-content: center; /* 这将视频水平居中 */
+    }
+    video {
+      width: 85%;
+      height: 85%;
+    }
+    </style>
 </head>
 <body>
-
     <div class="content-wrapper">
         <div class="content">
-    <p align="center" style="color: #0078d7;">这里只有你想不到，没有找不到的</p>
-    <h4>如有需要投广告的可加以下方式</h4>
-    <p>@作者联系方式vx:<p  align="center" style="color: red;">wang2523008894</p></p>
-    <p>免费电影，电视剧，要各种VIP的这里都免费（点击即可观看）</p>
-    <p align="center"><a href="https://w5vue.com/" id="h-link">免费电影</a></p>
-
-
-    
-    <h3>祝福语:(新生)</h2>
-    <p style="color: #00ff00;">恭喜你踏入新的人生阶段，愿你在接下来的日子里充满喜悦和成功。</p>
-    <P style="color: yellow;">新生如旭日东升，愿你勇往直前，开创属于自己的辉煌。</P>
-    <P style="color: violet;">在这新的开始，愿你的每一天都充满阳光和欢笑，未来充满无限可能。</P>
-    <P style="color: tomato;"> 新生是希望的象征，愿你在未来的道路上勇往直前，实现自己的梦想。</P>
-    <P style="color: sienna;">愿你像新芽一样茁壮成长，不畏风雨，绽放出最美的花朵。</P>
-    <P style="color: sandybrown;">新生代表新的起点，愿你以坚定的步伐走向成功，创造美好的未来。</P>
-    <P style="color: orangered;">恭喜你开始新的旅程，愿你在人生的道路上不断前行，收获满满的幸福和成就。</P>
-    <P style="color: pink;">新生如同白纸一张，愿你用智慧和勇气书写属于自己的精彩篇章。</P>
-    <P style="color: mediumvioletred;">在这个新的开始，愿你的心中充满阳光和希望，勇敢地追求自己的梦想。</P>
-    <P style="color: lightsteelblue;">新生是新的开始，也是新的希望，愿你在未来的日子里一切顺利，实现自己的人生价值。</p>
-        
-        
-        <video autoplay loop controls width="50%" height="50%">
-            <source src="images/1.mp4" type="video/mp4">
-        </video>
-
-
-       <h2>热门链接(点击会自动跳转)</h2> 
-        <p>以下全是代码生成</p>
-        <a href="https://mydewang.github.io/liangzi/" target="_blank" id="red-link">1.量子效果（用2个网页建议用电脑）</a>
-        <br><a href=" https://mydewang.github.io/longjuanfeng/" target="_blank" id="blue-link">2.龙卷风</a>
-        <br><a href="https://mydewang.github.io/aixin/" target="_blank" id="g-likn">3.表白（爱心）</a>
-        <br><a href="https://haiyong.site/tools/yanhua/">4.烟花</a>
-        <p align="center">更多代码，尽请关注我们的网站</p>
-
-
-        <h3>新生须知:</h3>
+            <p align="center" style="color: #0078d7;">这里只有你想不到，没有找不到的</p>
+            <h4>如有需要投广告的可加以下方式</h4>
+            <p>@作者联系方式vx:<p align="center" style="color: red;">wang2523008894</p></p>
+            <p style="color: hotpink;">免费电影，电视剧，要各种VIP的这里都免费（点击即可观看）</p>
+            <p align="center"><a href="https://w5vue.com/" id="h-link">免费电影</a></p>
+            <h3>祝福语:(新生)</h3>
+            <p style="color: #00ff00;">恭喜你踏入新的人生阶段，愿你在接下来的日子里充满喜悦和成功。</p>
+            <p style="color: yellow;">新生如旭日东升，愿你勇往直前，开创属于自己的辉煌。</p>
+            <p style="color: violet;">在这新的开始，愿你的每一天都充满阳光和欢笑，未来充满无限可能。</p>
+            <p style="color: tomato;">新生是希望的象征，愿你在未来的道路上勇往直前，实现自己的梦想。</p>
+            <p style="color: sienna;">愿你像新芽一样茁壮成长，不畏风雨，绽放出最美的花朵。</p>
+            <p style="color: sandybrown;">新生代表新的起点，愿你以坚定的步伐走向成功，创造美好的未来。</p>
+            <p style="color: orangered;">恭喜你开始新的旅程，愿你在人生的道路上不断前行，收获满满的幸福和成就。</p>
+            <p style="color: pink;">新生如同白纸一张，愿你用智慧和勇气书写属于自己的精彩篇章。</p>
+            <p style="color: mediumvioletred;">在这个新的开始，愿你的心中充满阳光和希望，勇敢地追求自己的梦想。</p>
+            <p style="color: lightsteelblue;">新生是新的开始，也是新的希望，愿你在未来的日子里一切顺利，实现自己的人生价值。</p>
+            <div class="video-container">
+                <!-- 视频 -->
+                <video autoplay loop controls >
+                    <source src="images/1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <h2>热门链接(点击会自动跳转)</h2> 
+            <p>以下全是代码生成</p>
+            <a href="https://mydewang.github.io/liangzi/" target="_blank" id="red-link">1.量子效果（用2个网页建议用电脑）</a>
+            <br><a href=" https://mydewang.github.io/longjuanfeng/" target="_blank" id="blue-link">2.龙卷风</a>
+            <br><a href="https://mydewang.github.io/aixin/" target="_blank" id="g-likn">3.表白（爱心）</a>
+            <br><a href="https://haiyong.site/tools/yanhua/">4.烟花</a>
+            <p align="center" style="color: #00ff00;">更多代码，尽请关注我们的网站</p>
+            <h3>新生须知:</h3>
             <p style="color: yellowgreen;">1.军训2周</p>
-            <P>2.内职表白墙<P  align="center" style="color: red;"> qq:1324864399</P>   
+            <P>2.内职表白墙<P align="center" style="color: red;"> qq:1324864399</P>   
             </P>
-            <p>3.外卖：内职外卖，微加外卖，私人商家外卖等等，（微信搜名称或者扫码）</p>
-            <P style="color: #0078d7;"><img src="images/5.jpg" width="40%" height="40%">（比较推荐一家）</P>
+            <p style="color: fuchsia;">3.外卖：内职外卖，微加外卖，私人商家外卖等等，（微信搜名称或者扫码）</p>
+            <P style="color: #0078d7;"><img src="/images/5.jpg" width="40%" height="40%" onclick="zoomImage(this)">（比较推荐一家）</P>
             <p align="center" style="color: #00ff00;">更多精彩内容，尽请关注我们的网站。</p>
-
-            
             <h1>欢迎来到内职广告网站</h1>
             <p style="color: #00ff00;">这里是一些关于我们的广告信息。请浏览以下内容：</p>
             <p>学习强国；网课（需要的可以联系@作者）</p>
             <p style="color: orange;">代看网课（包做题，正确率95%），只需要5块全网最低 代刷学习强国每天保证40分以上（每个月10r）全网最低</p>
-            <p><img src="images/1.jpg" width="35%" height="35%"><img src="images/2.jpg" width="35%" height="35%"><img src="images/3.jpg" width="35%" height="35%"></p>
-
-
-       
-                
-                    
-                </p><p>买被子就找@习习学姐！</p>
-                <div class="button-container">
+            <p><img src="images/1.jpg" width="30%" height="30%" onclick="zoomImage(this)"> <img src="images/2.jpg" width="30%" height="30%" onclick="zoomImage(this)"><img src="images/3.jpg" width="30%" height="30%" onclick="zoomImage(this)"></p>
+            <P>买被子就找 <span style="color:fuchsia;">@习习学姐！</span></P>
+            <div class="button-container">
                 <button id="openBtn">点击显示联系方式</button>
-              </div><div id="overlay" class="overlay">
-                    <div class="popup">
-                      <h2>vx:</h2>
-                      <p><img src="/image/12.jpg" alt="" class="img">
-               
-                        <p align="center"style="color: red;">vx:zhouyu5771</p></p>
-                      <button id="closeBtn">关闭</button>
-                    </div>
-                  </div>
-                
-                <p><img src="images/6.jpg" alt="广告图片1" onclick="zoomImage(this)" width="35%" height="35%"> <img src="images/9.jpg" alt="广告图片2" onclick="zoomImage(this)" width="35%" height="35%"><img src="images/10.jpg" width="35%" height="35%" alt="广告图片3" onclick="zoomImage(this)"></p>
-            
+            </div>
+            <div id="overlay" class="overlay">
+                <div class="popup">
+                    <h2>vx:</h2>
+                    <p align="center"><img src="images/12.jpg" alt="" width="35%" height="35%">
+                    <p align="center" style="color: red;">vx:zhouyu5771</p></p>
+                    <button id="closeBtn">关闭</button>
+                </div>
+            </div>
+            <p><img src="images/6.jpg" alt="广告图片1" onclick="zoomImage(this)" width="30%" height="30%"> <img src="images/9.jpg" alt="广告图片2" onclick="zoomImage(this)" width="30%" height="30%"><img src="images/10.jpg" width="30%" height="30%" alt="广告图片3" onclick="zoomImage(this)"></p>
             <p align="center" style="color: orange;">更多精彩内容，尽请关注我们的网站。</p>
-        
-<script>
-    var openBtn = document.getElementById('openBtn');
+        </div>
+    </div>
+
+    <script>
+       var openBtn = document.getElementById('openBtn');
     var overlay = document.getElementById('overlay');
     var closeBtn = document.getElementById('closeBtn');
   
@@ -199,8 +209,29 @@
       overlay.style.display = 'none';
     });
 
-  </script>
-  </div></div>
-    </body>
+    function zoomImage(image) {
+        var enlargedImage = document.createElement('img');
+        enlargedImage.src = image.src;
+        enlargedImage.style.width = '80%';
+        enlargedImage.style.height = 'auto';
+        enlargedImage.style.position = 'fixed';
+        enlargedImage.style.top = '50%';
+        enlargedImage.style.left = '50%';
+        enlargedImage.style.transform = 'translate(-50%, -50%)';
+        enlargedImage.style.zIndex = '1000';
+        enlargedImage.style.borderRadius = '10px';
+        enlargedImage.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.3)';
+        enlargedImage.style.backgroundColor = 'white';
+        enlargedImage.style.padding = '10px';
+        enlargedImage.style.maxWidth = '90%';
+        enlargedImage.style.maxHeight = '90%';
+        enlargedImage.style.boxSizing = 'border-box';
+        enlargedImage.style.cursor = 'zoom-out';
+        enlargedImage.onclick = function() {
+            document.body.removeChild(enlargedImage);
+        };
+        document.body.appendChild(enlargedImage);
+    }
+    </script>
+</body>
 </html>
-   
