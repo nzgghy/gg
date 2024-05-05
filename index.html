@@ -153,13 +153,13 @@
             <p style="color: pink;">新生如同白纸一张，愿你用智慧和勇气书写属于自己的精彩篇章。</p>
             <p style="color: mediumvioletred;">在这个新的开始，愿你的心中充满阳光和希望，勇敢地追求自己的梦想。</p>
             <p style="color: lightsteelblue;">新生是新的开始，也是新的希望，愿你在未来的日子里一切顺利，实现自己的人生价值。</p>
-         </div>
-<div class="video-container">
-    <!-- 视频 -->
-    <video id="myVideo" loop controls style="display: none;">
-        <source src="images/1.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
+            <div class="video-container" onclick="playVideo()">
+                <!-- 视频 -->
+                <video id="myVideo" loop controls >
+                    <source src="images/10.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
             <h2>热门链接(点击会自动跳转)</h2> 
             <p>以下全是代码生成</p>
             <a href="https://mydewang.github.io/liangzi/" target="_blank" id="red-link">1.量子效果（用2个网页建议用电脑）</a>
@@ -186,7 +186,7 @@
             <div id="overlay" class="overlay">
                 <div class="popup">
                     <h2>vx:</h2>
-                    <p align="center"><img src="images/12.jpg" alt="" width="35%" height="35%">
+                    <p align="center"><img src="/images/12.jpg" alt="" width="35%" height="35%">
                     <p align="center" style="color: red;">vx:zhouyu5771</p></p>
                     <button id="closeBtn">关闭</button>
                 </div>
@@ -232,16 +232,16 @@
         };
         document.body.appendChild(enlargedImage);
     }
-    </script>
-    <script>
-    var playVideoBtn = document.getElementById('playVideoBtn');
-    var video = document.getElementById('myVideo');
 
-    playVideoBtn.addEventListener('click', function() {
-        video.style.display = 'block';
-        video.play();
-        playVideoBtn.style.display = 'none'; // 隐藏按钮
-    });
-</script>
+    function playVideo() {
+        var video = document.getElementById('myVideo');
+        if (video.paused) {
+            video.play();
+        } else {
+            video.pause();
+        }
+    }
+    </script>
+    
 </body>
 </html>
